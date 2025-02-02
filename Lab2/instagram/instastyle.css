@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+}
+
+body {
+    width: 100%;
+    background-color: #fafafa;
+}
+
+form {
+    background-color: #fff;
+    border: 1px solid rgb(200, 200, 200);
+    margin: 7vh 680px;
+    padding: 10px 5px 20px 5px;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+}
+
+input[type='text'], input[type='password'] {
+    background-color: #fafafa;
+    border: 1.5px solid rgb(200, 200, 200);
+    border-radius: 3px;
+    width: 268px;
+    margin-left: 34px;
+    padding: 9px 0px 7px 8px;
+}
+
+button {
+    background-color: #5ebbe6;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    margin: 6px 34px;
+    width: 280px;
+    padding: 10px 0;
+    font-weight: 600;
+}
+
+form p {
+    text-align: center;
+}
+
+.insta-logo {
+    width: 174px;
+    height: 50px;
+    cursor: pointer;
+    font-style: italic;
+    display: inline-block;
+    margin-left: 90px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+form a span img {
+    width: 15px;
+    height: 15px;
+}
+
+.impo {
+    margin-bottom: 20px;
+}
+
+.ff {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.ss, .tt {
+    background-color: gray;
+    height: 1px;
+    width: 135px;
+}
+
+.ili {
+    font-weight: 600; 
+    color: gray; 
+    padding: 0px 20px 0px 20px;
+}
+
+.voidi {
+    color: #385185;
+}
+
+.forget {
+    color: #00376b
+}
+
+.registration {
+    background-color: #fff;
+    border: 1px solid rgb(200, 200, 200);
+    width: 350px;
+    height: 63px;
+    text-align: center;
+    margin: 74vh 680px;
+    padding: 10px 5px 0px 5px;
+    position: absolute;
+}
+
+.registration div {
+    margin: -3px 0px -4px;
+    padding-top: 20px;  
+}
+
+.registration div a {
+    color: #0095f6;
+}
+
+div .install {
+    position: absolute;
+    margin: 87vh 770px;
+    width: 100%;
+}
+
+.google-play {
+    width: 134px;
+    height: 40px;
+    position: absolute;
+    margin: 92vh 725px;
+}
+
+.microsoft {
+    width: 111px;
+    height: 40px;
+    position: absolute;
+    margin: 92vh 870px;
+}
+
+.phone {
+    width: 380px;
+    height: 581px;
+    position: absolute;
+    margin: 7vh 270px;
+}
