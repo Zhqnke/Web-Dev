@@ -1,0 +1,13 @@
+<section class="listing">
+    <img class="product-image" [src]="productInfo.photoURL" alt="photo of {{productInfo.name}}">
+    <h2 class="product-name">{{productInfo.name}}</h2>
+    <p class="product-description">{{productInfo.description}}</p>
+    <p class="product-rating">{{productInfo.rating}}</p>
+    <a class="details" [routerLink]="['/details', productInfo.id]">Details</a>
+    <a class="product-link"[href]="productInfo.link" target="_blank">More</a>
+    <div class="share-buttons">
+      <a [href]="getWhatsAppLink()" target="_blank">Share on WhatsApp</a><br>
+      <a [href]="getTelegramLink()" target="_blank">Share on Telegram</a>
+    </div>
+    
+</section>

@@ -1,0 +1,11 @@
+<div class="search-part">
+    <input type="text" placeholder="Search...">
+    <button id="search-b" type="button">Search</button>
+</div>
+<div class="categories">
+    <button (click)="filterByCategory('')" [class.active]="selectedCategory===''">all</button>
+    <button *ngFor="let category of categories" (click)="filterByCategory(category)" [class.active]="category===selectedCategory">{{category}}</button>
+</div>
+<section class="results">
+    <app-products *ngFor="let p of filteredList" [productInfo] = "p"></app-products>
+</section>
