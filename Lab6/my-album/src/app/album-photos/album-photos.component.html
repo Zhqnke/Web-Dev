@@ -1,0 +1,15 @@
+<div class="container">
+    <a [routerLink]="['/albums',photos[0]?.albumId]" *ngIf="photos.length > 0">Return to albums</a>
+    <a [routerLink]="['/albums']" *ngIf="photos.length === 0">Return to list of albums</a>
+    <h2 *ngIf="photos.length > 0">Photos of album #{{photos[0].albumId}}</h2>
+    <div *ngIf="!loaded" class="loading">
+        Loading photos...
+    </div>
+    <div class="photos-grid" *ngIf="loaded && photos.length > 0">
+        <div class="photo-card" *ngFor="let photo of photos">
+          <img [src]="photo.thumbnailUrl" [alt]="photo.title">
+          <h4>{{photo.title}}</h4>
+          <a [href]="photo.url" target="_blank">Открыть полный размер</a>
+        </div>
+      </div>
+</div>

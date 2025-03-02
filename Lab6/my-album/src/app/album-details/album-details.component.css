@@ -1,0 +1,177 @@
+/* Main container styling */
+:host {
+    display: block;
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    color: #333;
+  }
+  
+  /* Header styling */
+  h3 {
+    font-size: 18px;
+    color: #555;
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  h4 {
+    font-size: 24px;
+    margin: 16px 0;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    margin-right: 10px;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  button:active {
+    transform: translateY(1px);
+  }
+  
+  button:last-child {
+    margin-right: 0;
+  }
+  
+  /* Save/Cancel buttons */
+  button:nth-child(2) {
+    background-color: #e74c3c;
+  }
+  
+  button:nth-child(2):hover {
+    background-color: #c0392b;
+  }
+  
+  /* Input styling */
+  input {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  }
+  
+  /* Link styling */
+  a {
+    display: inline-block;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.2s;
+  }
+  
+  a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #3498db;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s;
+  }
+  
+  a:hover {
+    color: #2980b9;
+  }
+  
+  a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  /* Photos link specific styling */
+  div a {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px 16px;
+    border-radius: 6px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  div a::before {
+    content: '📷';
+    margin-right: 8px;
+  }
+  
+  div a:hover {
+    background-color: #e9ecef;
+  }
+  
+  /* Loading state styling */
+  ng-template div {
+    text-align: center;
+    padding: 40px 0;
+    color: #7f8c8d;
+    font-style: italic;
+  }
+  
+  /* Edit form container */
+  [editBlock] div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 16px 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    :host {
+      padding: 16px;
+      margin: 10px;
+    }
+    
+    h4 {
+      font-size: 20px;
+    }
+    
+    [editBlock] div {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    input {
+      width: 100%;
+      margin-right: 0;
+    }
+    
+    button {
+      margin-top: 10px;
+    }
+  }
