@@ -1,0 +1,17 @@
+<h2>Companies</h2>
+
+@if (loading) {
+  <div>Loading companies...</div>
+}
+
+@if (!loading) {
+  <ul>
+    @for (company of companies; track company.id) {
+      <li>
+        <a [routerLink]="['/companies', company.id, 'vacancies']">
+          {{ company.name }} ({{ company.city }})
+        </a>
+      </li>
+    }
+  </ul>
+}

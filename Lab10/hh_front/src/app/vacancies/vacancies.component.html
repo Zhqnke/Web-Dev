@@ -1,0 +1,19 @@
+<h2>Vacancies</h2>
+
+@if (loading) {
+  <div>Loading vacancies...</div>
+}
+
+@if (!loading) {
+  <ul>
+    @for (vacancy of vacancies; track vacancy.id) {
+      <li>
+        <h3>{{ vacancy.name }}</h3>
+        <p>Salary: ${{ vacancy.salary }}</p>
+        <p>{{ vacancy.description }}</p>
+      </li>
+    }
+  </ul>
+}
+
+<a routerLink="/">← Back to Companies</a>
